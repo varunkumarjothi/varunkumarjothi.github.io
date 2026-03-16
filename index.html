@@ -10,14 +10,14 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--white);font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
-.cursor{width:12px;height:12px;background:var(--red);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transition:transform 0.1s;mix-blend-mode:screen;}
+.cursor{width:12px;height:12px;background:var(--red);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transition:transform 0.1s;}
 .cursor-ring{width:40px;height:40px;border:1.5px solid rgba(232,21,58,0.5);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transition:all 0.15s ease;}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(232,21,58,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(232,21,58,0.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,16,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.1em;}
 .nav-logo span{color:var(--red);}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);text-decoration:none;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);text-decoration:none;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;cursor:pointer;}
 .nav-links a:hover{color:var(--red);}
 #hero{min-height:100vh;display:flex;align-items:center;padding:120px 60px 80px;position:relative;overflow:hidden;z-index:1;}
 .hero-orb{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(232,21,58,0.08) 0%,transparent 70%);top:50%;left:30%;transform:translate(-50%,-50%);pointer-events:none;animation:orbPulse 4s ease-in-out infinite;}
@@ -35,9 +35,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 60px;display:fl
 .hero-tagline em{color:var(--white);font-style:normal;}
 .hero-role{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--red);letter-spacing:0.1em;margin-bottom:48px;}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
-.btn-red{padding:14px 36px;background:var(--red);color:var(--white);font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;cursor:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:all 0.2s;}
+.btn-red{padding:14px 36px;background:var(--red);color:var(--white);font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:all 0.2s;}
 .btn-red:hover{background:#ff1a3d;transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,21,58,0.4);}
-.btn-ghost{padding:14px 36px;background:transparent;color:var(--white);font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);cursor:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:all 0.2s;}
+.btn-ghost{padding:14px 36px;background:transparent;color:var(--white);font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);cursor:pointer;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:all 0.2s;}
 .btn-ghost:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px);}
 .hero-photo-wrap{position:absolute;right:80px;top:50%;transform:translateY(-50%);z-index:2;}
 .hero-photo-outer{position:relative;width:250px;height:300px;animation:floatPhoto 6s ease-in-out infinite;}
@@ -92,10 +92,10 @@ section{position:relative;z-index:1;}
 .proj-point{display:flex;align-items:flex-start;gap:10px;font-size:0.84rem;color:var(--muted);line-height:1.6;}
 .proj-point::before{content:'//';color:var(--red);font-family:'JetBrains Mono',monospace;font-size:0.65rem;flex-shrink:0;margin-top:2px;}
 .proj-tags{display:flex;flex-wrap:wrap;gap:6px;}
-.tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;padding:4px 10px;border:1px solid var(--border);color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;transition:all 0.2s;}
+.tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;padding:4px 10px;border:1px solid var(--border);color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;transition:all 0.2s;cursor:pointer;}
 .tag:hover{border-color:var(--red);color:var(--red);}
 .proj-links{display:flex;flex-direction:column;gap:10px;align-self:start;}
-.plink{font-family:'JetBrains Mono',monospace;font-size:0.65rem;padding:10px 16px;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;text-align:center;transition:all 0.2s;cursor:none;}
+.plink{font-family:'JetBrains Mono',monospace;font-size:0.65rem;padding:10px 16px;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;text-align:center;transition:all 0.2s;cursor:pointer;}
 .plink-gh{background:var(--surface);border:1px solid var(--border);color:var(--white);}
 .plink-gh:hover{border-color:var(--white);transform:translateY(-2px);}
 .plink-tb{background:transparent;border:1px solid var(--blue);color:var(--blue);}
@@ -134,11 +134,11 @@ section{position:relative;z-index:1;}
 .blog-tag{font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;}
 .blog-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;line-height:1.2;margin-bottom:14px;}
 .blog-excerpt{font-size:0.82rem;color:var(--muted);line-height:1.7;margin-bottom:20px;}
-.blog-read-btn{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--red);letter-spacing:0.08em;text-transform:uppercase;background:none;border:1px solid rgba(232,21,58,0.3);padding:8px 16px;cursor:none;transition:all 0.2s;}
+.blog-read-btn{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--red);letter-spacing:0.08em;text-transform:uppercase;background:none;border:1px solid rgba(232,21,58,0.3);padding:8px 16px;cursor:pointer;transition:all 0.2s;}
 .blog-read-btn:hover{background:var(--red);color:var(--white);}
 .blog-full{display:none;background:var(--card);border:1px solid var(--border);padding:60px;margin-bottom:3px;position:relative;}
 .blog-full.active{display:block;}
-.blog-full-close{position:absolute;top:24px;right:24px;font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);background:none;border:1px solid var(--border);padding:8px 16px;cursor:none;transition:all 0.2s;letter-spacing:0.08em;}
+.blog-full-close{position:absolute;top:24px;right:24px;font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);background:none;border:1px solid var(--border);padding:8px 16px;cursor:pointer;transition:all 0.2s;letter-spacing:0.08em;}
 .blog-full-close:hover{border-color:var(--red);color:var(--red);}
 .bh1{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:-0.02em;margin-bottom:8px;line-height:1.1;}
 .bmeta{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);margin-bottom:32px;}
@@ -149,11 +149,11 @@ section{position:relative;z-index:1;}
 .bhr{border:none;border-top:1px solid var(--border);margin:28px 0;}
 #contact{padding:120px 60px;border-top:1px solid var(--border);position:relative;overflow:hidden;text-align:center;z-index:1;}
 .contact-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(232,21,58,0.06) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
-.contact-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,7rem);letter-spacing:-0.03em;line-height:0.9;margin-bottom:20px;position:relative;}
+.contact-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,7rem);letter-spacing:-0.03em;line-height:0.9;margin-bottom:20px;}
 .contact-title span{color:var(--red);}
-.contact-sub{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);margin-bottom:48px;position:relative;line-height:1.7;}
-.contact-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;}
-.clink{font-family:'JetBrains Mono',monospace;font-size:0.7rem;padding:14px 28px;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;border:1px solid var(--border);color:var(--muted);transition:all 0.2s;cursor:none;}
+.contact-sub{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);margin-bottom:48px;line-height:1.7;}
+.contact-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+.clink{font-family:'JetBrains Mono',monospace;font-size:0.7rem;padding:14px 28px;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;border:1px solid var(--border);color:var(--muted);transition:all 0.2s;cursor:pointer;}
 .clink:hover{border-color:var(--red);color:var(--red);transform:translateY(-3px);}
 .clink.primary{background:var(--red);border-color:var(--red);color:var(--white);}
 .clink.primary:hover{background:#ff1a3d;box-shadow:0 8px 24px rgba(232,21,58,0.4);}
@@ -301,9 +301,9 @@ footer{padding:28px 60px;border-top:1px solid var(--border);display:flex;justify
       <div class="exp-right">
         <div class="exp-role">Junior Software Developer</div>
         <div class="exp-points">
-          <div class="exp-point">Developed and maintained internal software tools using Python to automate data workflows and reduce manual processing time</div>
-          <div class="exp-point">Built and optimised SQL queries to extract, transform and report on customer account data across internal systems</div>
-          <div class="exp-point">Collaborated with cross-functional teams to document technical requirements and deliver data-driven solutions</div>
+          <div class="exp-point">Developed and maintained internal software tools using Python to automate data workflows</div>
+          <div class="exp-point">Built and optimised SQL queries to extract, transform and report on customer account data</div>
+          <div class="exp-point">Collaborated with cross-functional teams to document technical requirements and deliver solutions</div>
         </div>
       </div>
     </div>
@@ -432,7 +432,7 @@ footer{padding:28px 60px;border-top:1px solid var(--border);display:flex;justify
 <p class="bp">The full code is on GitHub:</p>
 <p class="bp"><strong><a href="https://github.com/varunkumarjothi/Retail-Intelligence-Platform" target="_blank" style="color:#e8153a;text-decoration:underline;">https://github.com/varunkumarjothi/Retail-Intelligence-Platform</a></strong></p>
 <p class="bp">The Tableau dashboard is live:</p>
-<p class="bp"><strong><a href="https://public.tableau.com/app/profile/varun.kumar.jothi/viz/RetailIntelligencePlatform/Dashboard2" target="_blank" style="color:#e8153a;text-decoration:underline;">https://public.tableau.com/app/profile/varun.kumar.jothi/viz/RetailIntelligencePlatform/Dashboard2</a></strong></p>
+<p class="bp"><strong><a href="https://public.tableau.com/app/profile/varun.kumar.jothi/viz/RetailIntelligencePlatform/RetailIntelligenceDashboard" target="_blank" style="color:#e8153a;text-decoration:underline;">https://public.tableau.com/app/profile/varun.kumar.jothi/viz/RetailIntelligencePlatform/RetailIntelligenceDashboard</a></strong></p>
 <hr class="bhr"/>
 <p class="bmeta">If you're building something similar or just want to talk data — reach out at varunkumarjothi@gmail.com</p>
 
@@ -592,16 +592,14 @@ footer{padding:28px 60px;border-top:1px solid var(--border);display:flex;justify
 </section>
 <section id="contact">
   <div class="contact-glow"></div>
-  <div class="fade-up">
-    <div class="sec-label" style="justify-content:center;">Get In Touch</div>
-    <h2 class="contact-title">Let's Build<br/>Something <span>Real.</span></h2>
-    <p class="contact-sub">Open to Data Analyst and Python Developer roles — worldwide and remote.<br/>Chennai based · Available immediately.</p>
-    <div class="contact-links">
-      <a href="mailto:varunkumarjothi@gmail.com" class="clink primary">varunkumarjothi@gmail.com</a>
-      <a href="https://github.com/varunkumarjothi" class="clink" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/varunkumarjothi" class="clink" target="_blank">LinkedIn</a>
-      <a href="tel:+918056103644" class="clink">+91 80561 03644</a>
-    </div>
+  <div class="sec-label" style="justify-content:center;margin-bottom:20px;">Get In Touch</div>
+  <h2 class="contact-title">Let's Build<br/>Something <span>Real.</span></h2>
+  <p class="contact-sub">Open to Data Analyst and Python Developer roles — worldwide and remote.<br/>Chennai based · Available immediately.</p>
+  <div class="contact-links">
+    <a href="mailto:varunkumarjothi@gmail.com" class="clink primary">varunkumarjothi@gmail.com</a>
+    <a href="https://github.com/varunkumarjothi" class="clink" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/varunkumarjothi" class="clink" target="_blank">LinkedIn</a>
+    <a href="tel:+918056103644" class="clink">+91 80561 03644</a>
   </div>
 </section>
 <footer>
@@ -614,10 +612,7 @@ const ring=document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx-6+'px';cursor.style.top=my-6+'px';});
 (function a(){rx+=(mx-rx-20)*0.12;ry+=(my-ry-20)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
-document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cursor.style.transform='scale(2.5)';ring.style.transform='scale(1.5)';ring.style.borderColor='rgba(232,21,58,0.9)';});
-  el.addEventListener('mouseleave',()=>{cursor.style.transform='scale(1)';ring.style.transform='scale(1)';ring.style.borderColor='rgba(232,21,58,0.5)';});
-});
+/* cursor hover effects removed to prevent flickering */
 const obs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*120);});
 },{threshold:0.08});
